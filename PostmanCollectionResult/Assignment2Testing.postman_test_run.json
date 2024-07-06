@@ -1,0 +1,1724 @@
+{
+	"id": "84d54c2c-a938-4ca0-8122-a51fa6b5dccc",
+	"name": "Assignment2Testing",
+	"timestamp": "2024-07-06T22:33:39.042Z",
+	"collection_id": "36731963-b094e4ef-e38f-4d09-b58e-5ee437974caa",
+	"folder_id": 0,
+	"environment_id": "36731963-f9162139-b0dd-4aba-a89b-71c7543ae7a3",
+	"totalPass": 90,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-07-06T22:33:32.921Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "752975a0-2c64-4977-ab94-cd1caa64a7b0",
+			"name": "Creating new product - success case",
+			"url": "http://localhost:5000/api/products",
+			"time": 72,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response should have a product object": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should have a product object": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				72
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response should have a product object": true
+				}
+			]
+		},
+		{
+			"id": "c6d7caf6-99e2-4030-9ac1-d4e8ef6081a5",
+			"name": "Creating new product - failure case",
+			"url": "http://localhost:5000/api/products",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response must contain validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response must contain validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response must contain validation errors": true
+				}
+			]
+		},
+		{
+			"id": "c026d014-eff2-40ce-b20e-fb6650a4c260",
+			"name": "For getting a single product - success",
+			"url": "http://localhost:5000/api/products/6688a42d81b791087a41a198",
+			"time": 39,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response need to have correct product ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response need to have correct product ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response need to have correct product ID": true
+				}
+			]
+		},
+		{
+			"id": "0c5a9a0e-977f-42b0-8ee0-e47a18b92e50",
+			"name": "For getting all the products - success",
+			"url": "http://localhost:5000/api/products",
+			"time": 39,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should be an array": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be an array": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should be an array": false
+				}
+			]
+		},
+		{
+			"id": "cec72abc-fdf5-4817-9148-9cc67a4e2612",
+			"name": "Updating a product - success",
+			"url": "http://localhost:5000/api/products/6688a42d81b791087a41a198",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response need to  have updated product details": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response need to  have updated product details": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response need to  have updated product details": true
+				}
+			]
+		},
+		{
+			"id": "c27d8015-c05a-431e-b65c-b79e77aef31e",
+			"name": "Deleting a product - success",
+			"url": "http://localhost:5000/api/products/6689c2c3ec809403425d8f23",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response message should indicate deletion": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response message should indicate deletion": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response message should indicate deletion": true
+				}
+			]
+		},
+		{
+			"id": "d7d8c395-33c2-46f8-a3e9-8e9a9dc80d72",
+			"name": "For getting a single product - failure",
+			"url": "http://localhost:5000/api/products/66887df6984b48f78fc2fa0e",
+			"time": 41,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response should contain 'Product has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain 'Product has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response should contain 'Product has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "253f1eff-7aca-488c-a213-ddd0dcb5a226",
+			"name": "Updating a product - failure",
+			"url": "http://localhost:5000/api/products/66887df6952b48f78fc2fa0e",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response should contain validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response should contain validation errors": true
+				}
+			]
+		},
+		{
+			"id": "799f9bbc-5460-4dd8-89f6-cc23fcbc2d88",
+			"name": "Deleting a product - failure",
+			"url": "http://localhost:5000/api/products/66887e6f952b48f78fc2fa11",
+			"time": 38,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response should contain 'Product has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain 'Product has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				38
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response should contain 'Product has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "652e8678-8a4e-4315-9c60-35bafa24c407",
+			"name": "Creating User - success",
+			"url": "http://localhost:5000/api/users",
+			"time": 74,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains created user": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains created user": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				74
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains created user": true
+				}
+			]
+		},
+		{
+			"id": "e757a86e-e9da-49f4-b02e-0bc180e13428",
+			"name": "Deleting a user - success",
+			"url": "http://localhost:5000/api/users/6689c2f2ec809403425d8f25",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains 'User has been deleted'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'User has been deleted'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains 'User has been deleted'": true
+				}
+			]
+		},
+		{
+			"id": "5a43ceef-f7ea-4517-a37c-33b0fbbe3545",
+			"name": "Getting all the users - success",
+			"url": "http://localhost:5000/api/users",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains an array of users": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains an array of users": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains an array of users": true
+				}
+			]
+		},
+		{
+			"id": "92bfbb5d-b2ec-4183-ae28-f5bb3ea0b391",
+			"name": "Getting a single user - success",
+			"url": "http://localhost:5000/api/users/6688989481b791087a41a171",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains the correct user": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains the correct user": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains the correct user": true
+				}
+			]
+		},
+		{
+			"id": "b9a71d98-0c7e-4e3f-bca9-4e60d00469f5",
+			"name": "Updating a user - success",
+			"url": "http://localhost:5000/api/users/6689ba61ec809403425d8eac",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains updated user": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains updated user": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains updated user": true
+				}
+			]
+		},
+		{
+			"id": "e3b95f91-23f5-4c25-abb7-259b85b0c504",
+			"name": "Creating a user - failure",
+			"url": "http://localhost:5000/api/users",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response contains validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response contains validation errors": true
+				}
+			]
+		},
+		{
+			"id": "1f198b5f-8460-443c-ac29-280fb6ecb7d3",
+			"name": "Getting a user - failure",
+			"url": "http://localhost:5000/api/users/6688089481b791087a41a171",
+			"time": 39,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response should contain 'User has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain 'User has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response should contain 'User has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "2ef05c13-9b11-485b-8059-14ed42c8f855",
+			"name": "Updating a user - failure",
+			"url": "http://localhost:5000/api/users/66889e5e81b791087a41a181",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response contains validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response contains validation errors": true
+				}
+			]
+		},
+		{
+			"id": "0389d705-93fe-42a2-b1e7-26b169820b0f",
+			"name": "Deleting a user - failure",
+			"url": "http://localhost:5000/api/users/66788a03381b791087a41a195",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 404": false,
+				"Response should contain 'User has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response should contain 'User has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 404": false,
+					"Response should contain 'User has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "935b5b81-4be7-471e-9799-1cd2c946a100",
+			"name": "Creating a new cart - success",
+			"url": "http://localhost:5000/api/carts",
+			"time": 56,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains created cart": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains created cart": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				56
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains created cart": true
+				}
+			]
+		},
+		{
+			"id": "6d9f8221-35f3-4ea8-97ea-aaef0e2c4320",
+			"name": "Creating a new cart - failure",
+			"url": "http://localhost:5000/api/carts",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response contains validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response contains validation errors": true
+				}
+			]
+		},
+		{
+			"id": "eef64d20-83b5-4b20-bbdb-e6ae9ef15587",
+			"name": "Getting all cart things - success",
+			"url": "http://localhost:5000/api/carts",
+			"time": 81,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains an array of carts": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains an array of carts": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				81
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains an array of carts": true
+				}
+			]
+		},
+		{
+			"id": "b85bf67e-82eb-4d46-b7a6-1564b176899c",
+			"name": "Getting a single cart - success",
+			"url": "http://localhost:5000/api/carts/66897f5ba349bb05449cfb14",
+			"time": 82,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains the correct cart": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains the correct cart": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				82
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains the correct cart": true
+				}
+			]
+		},
+		{
+			"id": "94a1034e-3111-414e-8317-5babced7c18d",
+			"name": "Getting a cart - failure",
+			"url": "http://localhost:5000/api/carts/66897f5ba349bb05447cfb14",
+			"time": 37,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response should contain 'Cart has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain 'Cart has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				37
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response should contain 'Cart has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "0f032c77-1af3-4511-b450-2f6f72a92e44",
+			"name": "Updating cart - success",
+			"url": "http://localhost:5000/api/carts/668982b7a349bb05449cfb2b",
+			"time": 41,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains updated cart": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains updated cart": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains updated cart": true
+				}
+			]
+		},
+		{
+			"id": "758f9f9a-ce32-47cc-961f-952af9909dc2",
+			"name": "Updating cart - failure",
+			"url": "http://localhost:5000/api/carts/668982b7a349bb05449cfb2b",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response contains validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response contains validation errors": true
+				}
+			]
+		},
+		{
+			"id": "40a6081b-5cb3-4a1b-abf7-2e189ae16a39",
+			"name": "Deleting a cart item - success",
+			"url": "http://localhost:5000/api/carts/6689c483ec809403425d8f2d",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains 'Cart deleted'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'Cart deleted'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains 'Cart deleted'": true
+				}
+			]
+		},
+		{
+			"id": "af9fa351-298b-4fb3-9193-90cd331bbd5c",
+			"name": "Deleting a cart item - failure",
+			"url": "http://localhost:5000/api/carts/6689846aa349bb05448cfb35",
+			"time": 39,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response should contain 'Cart has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain 'Cart has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				39
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response should contain 'Cart has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "8e43a798-97f7-44e5-be3b-22d5a40db7e3",
+			"name": "Creating new comment - success",
+			"url": "http://localhost:5000/api/comments",
+			"time": 43,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains created comment": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains created comment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				43
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains created comment": true
+				}
+			]
+		},
+		{
+			"id": "f6ea8195-9249-4e9f-8abe-2300f7f14b04",
+			"name": "Creating new comment - failure",
+			"url": "http://localhost:5000/api/comments",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response contains validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response contains validation errors": true
+				}
+			]
+		},
+		{
+			"id": "2a83add7-1b01-450b-9258-13dde99b0b43",
+			"name": "Getting all the comments - success",
+			"url": "http://localhost:5000/api/comments",
+			"time": 110,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains an array of comments": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains an array of comments": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				110
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains an array of comments": true
+				}
+			]
+		},
+		{
+			"id": "a58c66b9-f8af-4a5f-a389-487f861d6633",
+			"name": "Getting single comment - success",
+			"url": "http://localhost:5000/api/comments/66898874a349bb05449cfb3a",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains the correct comment": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains the correct comment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains the correct comment": true
+				}
+			]
+		},
+		{
+			"id": "66412697-6916-45ce-99af-368e1f43c797",
+			"name": "Getting single comment - failure",
+			"url": "http://localhost:5000/api/comments/66898874a349bb05569cfb3a",
+			"time": 38,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response should contain 'Comment has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain 'Comment has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				38
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response should contain 'Comment has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "792c1bd6-819e-46ca-9d35-433e69859b5c",
+			"name": "Updating the comment - success",
+			"url": "http://localhost:5000/api/comments/66898a34a349bb05449cfb44",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains updated comment": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains updated comment": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				80
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains updated comment": true
+				}
+			]
+		},
+		{
+			"id": "f98afd20-e5d3-4241-8fba-46b38b95a8ab",
+			"name": "Updating the comment - failure",
+			"url": "http://localhost:5000/api/comments/66898a34a349bb05449cfb44",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response contains validation errors": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains validation errors": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response contains validation errors": true
+				}
+			]
+		},
+		{
+			"id": "b3703064-489e-40ad-8d0f-613e9be6cfda",
+			"name": "Deleting the comment - success",
+			"url": "http://localhost:5000/api/comments/6689c531ec809403425d8f37",
+			"time": 44,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains 'Comment is deleted'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains 'Comment is deleted'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				44
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains 'Comment is deleted'": true
+				}
+			]
+		},
+		{
+			"id": "8ab76ada-feb6-45b5-906f-0553b2d30218",
+			"name": "Deleting the comment - failure",
+			"url": "http://localhost:5000/api/comments/66898be7a328bb05449cfb48",
+			"time": 42,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response should contain 'Comment has not been found'": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should contain 'Comment has not been found'": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response should contain 'Comment has not been found'": true
+				}
+			]
+		},
+		{
+			"id": "3484ee1a-9fef-47f6-a6b3-033c5634acf2",
+			"name": "Creating new order - success",
+			"url": "http://localhost:5000/api/orders",
+			"time": 83,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response contains created order": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains created order": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				83
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response contains created order": true
+				}
+			]
+		},
+		{
+			"id": "f6e4d9ad-a9f1-42ff-abda-10a323726969",
+			"name": "Creating new order - failure",
+			"url": "http://localhost:5000/api/orders",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "84a967cc-02ce-44c5-9fa7-93af8497aa66",
+			"name": "Getting all the orders - success",
+			"url": "http://localhost:5000/api/orders",
+			"time": 101,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains array of orders": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains array of orders": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				101
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains array of orders": true
+				}
+			]
+		},
+		{
+			"id": "934250ab-4803-4ee6-9245-28ff218186a4",
+			"name": "Getting single order - success",
+			"url": "http://localhost:5000/api/orders/66898faaa349bb05449cfb4b",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains order details": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains order details": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				84
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains order details": true
+				}
+			]
+		},
+		{
+			"id": "47408829-0105-43e2-a4f4-25c87e80f6a1",
+			"name": "Getting single user - failure",
+			"url": "http://localhost:5000/api/orders/6689b4faec809405425d8e6c",
+			"time": 41,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				41
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "86d1f56e-3253-49ca-af4d-6a738a0568e5",
+			"name": "Updating order - success",
+			"url": "http://localhost:5000/api/orders/6689b4faec809403425d8e6c",
+			"time": 54,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains updated order": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains updated order": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				54
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains updated order": true
+				}
+			]
+		},
+		{
+			"id": "bfef2baa-12e9-454c-9b9c-f8d68bd440d0",
+			"name": "Updating order - failure",
+			"url": "http://localhost:5000/api/orders/6689b4faec809403425d7e6c",
+			"time": 45,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				45
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "cff14d58-c1d2-49c8-8918-8b7affc9379d",
+			"name": "Deleting order - success",
+			"url": "http://localhost:5000/api/orders/6689c5acec809403425d8f3f",
+			"time": 46,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response contains deletion confirmation": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains deletion confirmation": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				46
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response contains deletion confirmation": true
+				}
+			]
+		},
+		{
+			"id": "c83c6a05-a36c-4414-9e96-b5bc55fd375a",
+			"name": "Deleting order - failure",
+			"url": "http://localhost:5000/api/orders/6689b77dec819403425d8e8d",
+			"time": 50,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Response contains error message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains error message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				50
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Response contains error message": true
+				}
+			]
+		},
+		{
+			"id": "d2ae28e9-4087-4fb7-9065-b21062a692d6",
+			"name": "Checking the server",
+			"url": "http://localhost:5000",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 and the server is running": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 and the server is running": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200 and the server is running": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1964,
+	"collection": {
+		"requests": [
+			{
+				"id": "752975a0-2c64-4977-ab94-cd1caa64a7b0",
+				"method": "POST"
+			},
+			{
+				"id": "c6d7caf6-99e2-4030-9ac1-d4e8ef6081a5",
+				"method": "POST"
+			},
+			{
+				"id": "c026d014-eff2-40ce-b20e-fb6650a4c260",
+				"method": "GET"
+			},
+			{
+				"id": "0c5a9a0e-977f-42b0-8ee0-e47a18b92e50",
+				"method": "GET"
+			},
+			{
+				"id": "cec72abc-fdf5-4817-9148-9cc67a4e2612",
+				"method": "PUT"
+			},
+			{
+				"id": "c27d8015-c05a-431e-b65c-b79e77aef31e",
+				"method": "DELETE"
+			},
+			{
+				"id": "d7d8c395-33c2-46f8-a3e9-8e9a9dc80d72",
+				"method": "GET"
+			},
+			{
+				"id": "253f1eff-7aca-488c-a213-ddd0dcb5a226",
+				"method": "PUT"
+			},
+			{
+				"id": "799f9bbc-5460-4dd8-89f6-cc23fcbc2d88",
+				"method": "DELETE"
+			},
+			{
+				"id": "652e8678-8a4e-4315-9c60-35bafa24c407",
+				"method": "POST"
+			},
+			{
+				"id": "e757a86e-e9da-49f4-b02e-0bc180e13428",
+				"method": "DELETE"
+			},
+			{
+				"id": "5a43ceef-f7ea-4517-a37c-33b0fbbe3545",
+				"method": "GET"
+			},
+			{
+				"id": "92bfbb5d-b2ec-4183-ae28-f5bb3ea0b391",
+				"method": "GET"
+			},
+			{
+				"id": "b9a71d98-0c7e-4e3f-bca9-4e60d00469f5",
+				"method": "PUT"
+			},
+			{
+				"id": "e3b95f91-23f5-4c25-abb7-259b85b0c504",
+				"method": "POST"
+			},
+			{
+				"id": "1f198b5f-8460-443c-ac29-280fb6ecb7d3",
+				"method": "GET"
+			},
+			{
+				"id": "2ef05c13-9b11-485b-8059-14ed42c8f855",
+				"method": "PUT"
+			},
+			{
+				"id": "0389d705-93fe-42a2-b1e7-26b169820b0f",
+				"method": "DELETE"
+			},
+			{
+				"id": "935b5b81-4be7-471e-9799-1cd2c946a100",
+				"method": "POST"
+			},
+			{
+				"id": "6d9f8221-35f3-4ea8-97ea-aaef0e2c4320",
+				"method": "POST"
+			},
+			{
+				"id": "eef64d20-83b5-4b20-bbdb-e6ae9ef15587",
+				"method": "GET"
+			},
+			{
+				"id": "b85bf67e-82eb-4d46-b7a6-1564b176899c",
+				"method": "GET"
+			},
+			{
+				"id": "94a1034e-3111-414e-8317-5babced7c18d",
+				"method": "GET"
+			},
+			{
+				"id": "0f032c77-1af3-4511-b450-2f6f72a92e44",
+				"method": "PUT"
+			},
+			{
+				"id": "758f9f9a-ce32-47cc-961f-952af9909dc2",
+				"method": "PUT"
+			},
+			{
+				"id": "40a6081b-5cb3-4a1b-abf7-2e189ae16a39",
+				"method": "DELETE"
+			},
+			{
+				"id": "af9fa351-298b-4fb3-9193-90cd331bbd5c",
+				"method": "DELETE"
+			},
+			{
+				"id": "8e43a798-97f7-44e5-be3b-22d5a40db7e3",
+				"method": "POST"
+			},
+			{
+				"id": "f6ea8195-9249-4e9f-8abe-2300f7f14b04",
+				"method": "POST"
+			},
+			{
+				"id": "2a83add7-1b01-450b-9258-13dde99b0b43",
+				"method": "GET"
+			},
+			{
+				"id": "a58c66b9-f8af-4a5f-a389-487f861d6633",
+				"method": "GET"
+			},
+			{
+				"id": "66412697-6916-45ce-99af-368e1f43c797",
+				"method": "GET"
+			},
+			{
+				"id": "792c1bd6-819e-46ca-9d35-433e69859b5c",
+				"method": "PUT"
+			},
+			{
+				"id": "f98afd20-e5d3-4241-8fba-46b38b95a8ab",
+				"method": "PUT"
+			},
+			{
+				"id": "b3703064-489e-40ad-8d0f-613e9be6cfda",
+				"method": "DELETE"
+			},
+			{
+				"id": "8ab76ada-feb6-45b5-906f-0553b2d30218",
+				"method": "GET"
+			},
+			{
+				"id": "3484ee1a-9fef-47f6-a6b3-033c5634acf2",
+				"method": "POST"
+			},
+			{
+				"id": "f6e4d9ad-a9f1-42ff-abda-10a323726969",
+				"method": "POST"
+			},
+			{
+				"id": "84a967cc-02ce-44c5-9fa7-93af8497aa66",
+				"method": "GET"
+			},
+			{
+				"id": "934250ab-4803-4ee6-9245-28ff218186a4",
+				"method": "GET"
+			},
+			{
+				"id": "47408829-0105-43e2-a4f4-25c87e80f6a1",
+				"method": "GET"
+			},
+			{
+				"id": "86d1f56e-3253-49ca-af4d-6a738a0568e5",
+				"method": "PUT"
+			},
+			{
+				"id": "bfef2baa-12e9-454c-9b9c-f8d68bd440d0",
+				"method": "PUT"
+			},
+			{
+				"id": "cff14d58-c1d2-49c8-8918-8b7affc9379d",
+				"method": "DELETE"
+			},
+			{
+				"id": "c83c6a05-a36c-4414-9e96-b5bc55fd375a",
+				"method": "DELETE"
+			},
+			{
+				"id": "d2ae28e9-4087-4fb7-9065-b21062a692d6",
+				"method": "GET"
+			}
+		]
+	}
+}
